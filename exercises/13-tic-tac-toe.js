@@ -23,3 +23,31 @@
 //   [null, 'X', 'X']
 //   ])
 // null
+
+function ticTacToe (arrayTop, arrayMid, arrayBot) {
+  if (arrayTop[0,1,2] || arrayMid[0,1,2] || arrayBot[0,1,2] ||
+  (arrayTop[0] && arrayMid[0] && arrayBot[0]) ||
+  (arrayTop[1] && arrayMid[1] && arrayBot[1]) ||
+  (arrayTop[2] && arrayMid[2] && arrayBot[2]) ||
+  (arrayTop[0] && arrayMid[1] && arrayBot[2]) ||
+  (arrayTop[2] && arrayMid[1] && arrayBot[0]) === O) {
+    return 'O';
+  }
+  else if (arrayTop[0,1,2] || arrayMid[0,1,2] || arrayBot[0,1,2] ||
+  (arrayTop[0] && arrayMid[0] && arrayBot[0]) ||
+  (arrayTop[1] && arrayMid[1] && arrayBot[1]) ||
+  (arrayTop[2] && arrayMid[2] && arrayBot[2]) ||
+  (arrayTop[0] && arrayMid[1] && arrayBot[2]) ||
+  (arrayTop[2] && arrayMid[1] && arrayBot[0]) === X) {
+    return 'X';
+  }
+  else {
+    return null;
+  }
+}
+
+console.log(ticTacToe([
+['O', 'X', 'O'],
+['O', 'O', null],
+[null, 'X', 'X']
+]));

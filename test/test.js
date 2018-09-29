@@ -479,7 +479,7 @@ function checkLeetspeak () {
   })
 
   it('"leetspeak" function', function () {
-    assert.deepStrictEqual(module.leetspeak('Leet'), 'l337')
+    assert.deepStrictEqual(module.leetspeak('Leet'), 'L337')
     assert.deepStrictEqual(module.leetspeak(''), '')
     assert.deepStrictEqual(module.leetspeak('banana'), 'b4n4n4')
     assert.deepStrictEqual(module.leetspeak('kewl'), 'k3wl')
